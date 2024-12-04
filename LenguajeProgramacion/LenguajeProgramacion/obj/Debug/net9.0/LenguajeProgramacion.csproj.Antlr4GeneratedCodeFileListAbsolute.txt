@@ -1,0 +1,6 @@
+C:\Users\noble\source\repos\LenguajeProgramacion\LenguajeProgramacion\obj\Debug\net9.0\LenguajeLexer.cs
+C:\Users\noble\source\repos\LenguajeProgramacion\LenguajeProgramacion\obj\Debug\net9.0\LenguajeParser.cs
+C:\Users\noble\source\repos\LenguajeProgramacion\LenguajeProgramacion\obj\Debug\net9.0\LenguajeListener.cs
+C:\Users\noble\source\repos\LenguajeProgramacion\LenguajeProgramacion\obj\Debug\net9.0\LenguajeBaseListener.cs
+C:\Users\noble\source\repos\LenguajeProgramacion\LenguajeProgramacion\obj\Debug\net9.0\LenguajeVisitor.cs
+C:\Users\noble\source\repos\LenguajeProgramacion\LenguajeProgramacion\obj\Debug\net9.0\LenguajeBaseVisitor.cs
