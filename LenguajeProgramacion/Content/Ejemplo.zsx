@@ -1,0 +1,17 @@
+x = 0;
+y = 0;
+z = 0;
+i = 0;
+
+miMatriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+otraMatriz = [
+    [1, 2],
+    [4, 5]
+];
+
+imprimir ("Indice: " + miMatriz[0][1]); 

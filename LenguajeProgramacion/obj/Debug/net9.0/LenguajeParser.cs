@@ -53,8 +53,8 @@ public partial class LenguajeParser : Parser {
 	private static readonly string[] _LiteralNames = {
 		null, "';'", "'('", "')'", "'='", "'['", "','", "']'", "'!'", "'^'", "'raiz'", 
 		"'*'", "'/'", "'+'", "'-'", "'=='", "'!='", "'>'", "'<'", "'>='", "'<='", 
-		"'{'", "'}'", "'if'", "'else'", null, "'for'", null, null, null, null, 
-		null, null, "'null'"
+		"'{'", "'}'", null, null, null, null, null, null, null, null, null, null, 
+		"'null'"
 	};
 	private static readonly string[] _SymbolicNames = {
 		null, null, null, null, null, null, null, null, null, null, null, null, 

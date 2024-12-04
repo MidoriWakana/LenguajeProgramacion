@@ -8,8 +8,8 @@ statement: (assignment | matrixDeclaration | functionCall) ';';
 
 ifBlock: IF '(' expression ')' block (elseifBlock | elseBlock)?;
 
-IF: 'if';
-ELSE: 'else';
+IF: 'si' | 'Si' | 'SI' ;
+ELSE: 'entonces' | 'Entonces' | 'ENTONCES' ;
 
 elseifBlock: ELSE IF '(' expression ')' block (elseBlock)?;
 
@@ -17,16 +17,14 @@ elseBlock: ELSE block (elseBlock)?;
 
 whileBlock: WHILE '(' expression ')' block;
 
-WHILE: 'while' | 'until';
+WHILE: 'mientras' | 'Mientras' | 'MIENTRAS' | 'hasta' | 'Hasta' | 'HASTA' ;
 
 forBlock: FOR '(' assignment ';' expression? ';' assignment ')' block;
 
-FOR: 'for';
+FOR: 'para' | 'Para' | 'PARA' ;
 
-// Declaración de matrices
 matrixDeclaration: IDENTIFIER '=' '[' row (',' row)* ']';
 
-// Definición de una fila
 row: '[' expression (',' expression)* ']';
 
 indexAccess: IDENTIFIER '[' expression ']' ('[' expression ']')?;

@@ -14,8 +14,8 @@ namespace LenguajeProgramacion
         {
             Variables["PI"] = Math.PI;
             Variables["E"] = Math.E;
-            Variables["ESCRIBIR"] = new Func<object?[], object?>(Write);
-            Variables["escribir"] = new Func<object?[], object?>(Write);
+            Variables["IMPRIMIR"] = new Func<object?[], object?>(Write);
+            Variables["imprimir"] = new Func<object?[], object?>(Write);
         }
 
         public override object? VisitFunctionCall(LenguajeParser.FunctionCallContext context)
@@ -137,7 +137,7 @@ namespace LenguajeProgramacion
 
         public override object? VisitWhileBlock(LenguajeParser.WhileBlockContext context)
         {
-            Func<object?, bool> condition = context.WHILE().GetText() == "while"
+            Func<object?, bool> condition = context.WHILE().GetText() == "mientras"
                 ? IsTrue
                 : IsFalse
             ;
@@ -163,7 +163,6 @@ namespace LenguajeProgramacion
             var varName = context.IDENTIFIER().GetText();
             var rows = context.row();
 
-            // Crear la matriz como una lista de listas
             var matrix = new List<List<object>>();
 
             foreach (var row in rows)
@@ -187,16 +186,15 @@ namespace LenguajeProgramacion
                 matrix.Add(rowValues);
             }
 
-            // Guardar la matriz en el diccionario de variables
             Variables[varName] = matrix;
 
             foreach (var row in matrix)
             {
                 foreach (var value in row)
                 {
-                    Console.Write(value + "\t");  // Imprime cada valor seguido de un tabulador
+                    Console.Write(value + "\t");
                 }
-                Console.WriteLine();  // Nueva línea después de cada fila
+                Console.WriteLine();
             }
 
             return null;
@@ -217,11 +215,9 @@ namespace LenguajeProgramacion
                 throw new Exception($"La variable {varName} no es una matriz");
             }
 
-            // Obtener los índices
             var rowIndex = Convert.ToInt32(Visit(context.expression(0)));
             var colIndex = Convert.ToInt32(Visit(context.expression(1)));
 
-            // Verificar límites
             if (rowIndex < 0 || rowIndex >= matrix.Count || colIndex < 0 || colIndex >= matrix[rowIndex].Count)
             {
                 throw new Exception($"Índices fuera de rango: {rowIndex}, {colIndex}");
@@ -249,11 +245,10 @@ namespace LenguajeProgramacion
             return null;
         }
 
-
         public override object? VisitIfBlock(LenguajeParser.IfBlockContext context)
         {
 
-            Func<object?, bool> condition = context.IF().GetText() == "if"
+            Func<object?, bool> condition = context.IF().GetText() == "si"
                 ? IsTrue
                 : IsFalse
             ;
@@ -395,7 +390,7 @@ namespace LenguajeProgramacion
                 return Math.Pow(lFloat, rInt);
             if (left is string || right is string)
                 return $"{left}^{right}";
-            throw new Exception($"Cannot calculate power of values of types {left?.GetType()} and {right?.GetType()}");
+            throw new Exception($"No se puede calcular potencias de tipos de valor {left?.GetType()} y {right?.GetType()}");
         }
 
         private object? Sqrt(object? value)
@@ -415,10 +410,10 @@ namespace LenguajeProgramacion
                 }
                 else
                 {
-                    throw new ArgumentException("Invalid string input for square root");
+                    throw new ArgumentException("Entrada invalida para la raiz");
                 }
             }
-            throw new ArgumentException("Invalid type for square root");
+            throw new ArgumentException("Tipo invalido de raiz");
         }
 
         private bool IsTrue(object? value)
