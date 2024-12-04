@@ -57,6 +57,16 @@ public interface LenguajeListener extends ParseTreeListener {
 	 */
 	void exitElseifBlock(LenguajeParser.ElseifBlockContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link LenguajeParser#elseBlock}.
+	 * @param ctx the parse tree
+	 */
+	void enterElseBlock(LenguajeParser.ElseBlockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LenguajeParser#elseBlock}.
+	 * @param ctx the parse tree
+	 */
+	void exitElseBlock(LenguajeParser.ElseBlockContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link LenguajeParser#whileBlock}.
 	 * @param ctx the parse tree
 	 */
@@ -66,6 +76,46 @@ public interface LenguajeListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitWhileBlock(LenguajeParser.WhileBlockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LenguajeParser#forBlock}.
+	 * @param ctx the parse tree
+	 */
+	void enterForBlock(LenguajeParser.ForBlockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LenguajeParser#forBlock}.
+	 * @param ctx the parse tree
+	 */
+	void exitForBlock(LenguajeParser.ForBlockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LenguajeParser#matrixDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterMatrixDeclaration(LenguajeParser.MatrixDeclarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LenguajeParser#matrixDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitMatrixDeclaration(LenguajeParser.MatrixDeclarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LenguajeParser#row}.
+	 * @param ctx the parse tree
+	 */
+	void enterRow(LenguajeParser.RowContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LenguajeParser#row}.
+	 * @param ctx the parse tree
+	 */
+	void exitRow(LenguajeParser.RowContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LenguajeParser#indexAccess}.
+	 * @param ctx the parse tree
+	 */
+	void enterIndexAccess(LenguajeParser.IndexAccessContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LenguajeParser#indexAccess}.
+	 * @param ctx the parse tree
+	 */
+	void exitIndexAccess(LenguajeParser.IndexAccessContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LenguajeParser#assignment}.
 	 * @param ctx the parse tree
@@ -147,6 +197,30 @@ public interface LenguajeListener extends ParseTreeListener {
 	 */
 	void exitParentesis(LenguajeParser.ParentesisContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code Raiz}
+	 * labeled alternative in {@link LenguajeParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterRaiz(LenguajeParser.RaizContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code Raiz}
+	 * labeled alternative in {@link LenguajeParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitRaiz(LenguajeParser.RaizContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code Indices}
+	 * labeled alternative in {@link LenguajeParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterIndices(LenguajeParser.IndicesContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code Indices}
+	 * labeled alternative in {@link LenguajeParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitIndices(LenguajeParser.IndicesContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code LlamadoFunciones}
 	 * labeled alternative in {@link LenguajeParser#expression}.
 	 * @param ctx the parse tree
@@ -158,6 +232,18 @@ public interface LenguajeListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLlamadoFunciones(LenguajeParser.LlamadoFuncionesContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code Potencia}
+	 * labeled alternative in {@link LenguajeParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterPotencia(LenguajeParser.PotenciaContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code Potencia}
+	 * labeled alternative in {@link LenguajeParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitPotencia(LenguajeParser.PotenciaContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code Constantes}
 	 * labeled alternative in {@link LenguajeParser#expression}.
@@ -194,6 +280,26 @@ public interface LenguajeListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBooleanos(LenguajeParser.BooleanosContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LenguajeParser#powOp}.
+	 * @param ctx the parse tree
+	 */
+	void enterPowOp(LenguajeParser.PowOpContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LenguajeParser#powOp}.
+	 * @param ctx the parse tree
+	 */
+	void exitPowOp(LenguajeParser.PowOpContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LenguajeParser#sqrtOp}.
+	 * @param ctx the parse tree
+	 */
+	void enterSqrtOp(LenguajeParser.SqrtOpContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LenguajeParser#sqrtOp}.
+	 * @param ctx the parse tree
+	 */
+	void exitSqrtOp(LenguajeParser.SqrtOpContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LenguajeParser#multOp}.
 	 * @param ctx the parse tree

@@ -75,6 +75,18 @@ public class LenguajeBaseListener implements LenguajeListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterElseBlock(LenguajeParser.ElseBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitElseBlock(LenguajeParser.ElseBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterWhileBlock(LenguajeParser.WhileBlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -82,6 +94,54 @@ public class LenguajeBaseListener implements LenguajeListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitWhileBlock(LenguajeParser.WhileBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterForBlock(LenguajeParser.ForBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitForBlock(LenguajeParser.ForBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMatrixDeclaration(LenguajeParser.MatrixDeclarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMatrixDeclaration(LenguajeParser.MatrixDeclarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterRow(LenguajeParser.RowContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRow(LenguajeParser.RowContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIndexAccess(LenguajeParser.IndexAccessContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIndexAccess(LenguajeParser.IndexAccessContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -171,6 +231,30 @@ public class LenguajeBaseListener implements LenguajeListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterRaiz(LenguajeParser.RaizContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRaiz(LenguajeParser.RaizContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIndices(LenguajeParser.IndicesContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIndices(LenguajeParser.IndicesContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterLlamadoFunciones(LenguajeParser.LlamadoFuncionesContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -178,6 +262,18 @@ public class LenguajeBaseListener implements LenguajeListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLlamadoFunciones(LenguajeParser.LlamadoFuncionesContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPotencia(LenguajeParser.PotenciaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPotencia(LenguajeParser.PotenciaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -214,6 +310,30 @@ public class LenguajeBaseListener implements LenguajeListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBooleanos(LenguajeParser.BooleanosContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPowOp(LenguajeParser.PowOpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPowOp(LenguajeParser.PowOpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSqrtOp(LenguajeParser.SqrtOpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSqrtOp(LenguajeParser.SqrtOpContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
