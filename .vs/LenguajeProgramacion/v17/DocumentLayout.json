@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\noble\\source\\repos\\LenguajeProgramacion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2815C1F-DE2B-487E-9FBF-3FDF339262FB}|LenguajeProgramacion\\LenguajeProgramacion.csproj|c:\\users\\noble\\source\\repos\\lenguajeprogramacion\\lenguajeprogramacion\\content\\ejemplo.zsx||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{C2815C1F-DE2B-487E-9FBF-3FDF339262FB}|LenguajeProgramacion\\LenguajeProgramacion.csproj|solutionrelative:lenguajeprogramacion\\content\\ejemplo.zsx||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2815C1F-DE2B-487E-9FBF-3FDF339262FB}|LenguajeProgramacion\\LenguajeProgramacion.csproj|c:\\users\\noble\\source\\repos\\lenguajeprogramacion\\lenguajeprogramacion\\lenguajevisitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2815C1F-DE2B-487E-9FBF-3FDF339262FB}|LenguajeProgramacion\\LenguajeProgramacion.csproj|solutionrelative:lenguajeprogramacion\\lenguajevisitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2815C1F-DE2B-487E-9FBF-3FDF339262FB}|LenguajeProgramacion\\LenguajeProgramacion.csproj|c:\\users\\noble\\source\\repos\\lenguajeprogramacion\\lenguajeprogramacion\\content\\ejemplo.zsx||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C2815C1F-DE2B-487E-9FBF-3FDF339262FB}|LenguajeProgramacion\\LenguajeProgramacion.csproj|solutionrelative:lenguajeprogramacion\\content\\ejemplo.zsx||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2815C1F-DE2B-487E-9FBF-3FDF339262FB}|LenguajeProgramacion\\LenguajeProgramacion.csproj|c:\\users\\noble\\source\\repos\\lenguajeprogramacion\\lenguajeprogramacion\\content\\lenguaje.g4||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "LenguajeProgramacion\\Content\\Lenguaje.g4",
               "ToolTip": "C:\\Users\\noble\\source\\repos\\LenguajeProgramacion\\LenguajeProgramacion\\Content\\Lenguaje.g4",
               "RelativeToolTip": "LenguajeProgramacion\\Content\\Lenguaje.g4",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-11-30T04:46:12.937Z",
               "IsPinned": true,
@@ -60,26 +60,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Ejemplo.zsx",
               "DocumentMoniker": "C:\\Users\\noble\\source\\repos\\LenguajeProgramacion\\LenguajeProgramacion\\Content\\Ejemplo.zsx",
               "RelativeDocumentMoniker": "LenguajeProgramacion\\Content\\Ejemplo.zsx",
               "ToolTip": "C:\\Users\\noble\\source\\repos\\LenguajeProgramacion\\LenguajeProgramacion\\Content\\Ejemplo.zsx",
               "RelativeToolTip": "LenguajeProgramacion\\Content\\Ejemplo.zsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-11-29T21:02:04.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "LenguajeVisitor.cs",
               "DocumentMoniker": "C:\\Users\\noble\\source\\repos\\LenguajeProgramacion\\LenguajeProgramacion\\LenguajeVisitor.cs",
               "RelativeDocumentMoniker": "LenguajeProgramacion\\LenguajeVisitor.cs",
               "ToolTip": "C:\\Users\\noble\\source\\repos\\LenguajeProgramacion\\LenguajeProgramacion\\LenguajeVisitor.cs",
               "RelativeToolTip": "LenguajeProgramacion\\LenguajeVisitor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcBAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T19:25:48.997Z",
               "EditorCaption": ""
@@ -92,7 +92,7 @@
               "RelativeDocumentMoniker": "LenguajeProgramacion\\Program.cs",
               "ToolTip": "C:\\Users\\noble\\source\\repos\\LenguajeProgramacion\\LenguajeProgramacion\\Program.cs",
               "RelativeToolTip": "LenguajeProgramacion\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T19:36:02.539Z",
               "EditorCaption": ""

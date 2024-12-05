@@ -8,8 +8,11 @@ namespace LenguajeProgramacion
 {
     public class LenguajeVisitor: LenguajeBaseVisitor<object?> 
     {
+
+        // Definicion de diccionario con base a la gramatica
         private Dictionary<string, object?> Variables { get; } = new();
 
+        // Definicion de variables para Print, PI y E
         public LenguajeVisitor()
         {
             Variables["PI"] = Math.PI;
@@ -18,6 +21,7 @@ namespace LenguajeProgramacion
             Variables["imprimir"] = new Func<object?[], object?>(Write);
         }
 
+        // Definicion para realizar funciones en el lenguaje de programacion
         public override object? VisitFunctionCall(LenguajeParser.FunctionCallContext context)
         {
             var name = context.IDENTIFIER().GetText();
@@ -36,6 +40,7 @@ namespace LenguajeProgramacion
         }
 
 
+        // Definicion de asignaciones de variables
         public override object? VisitAssignment(LenguajeParser.AssignmentContext context)
         {
             var varName = context.IDENTIFIER().GetText();
@@ -47,6 +52,7 @@ namespace LenguajeProgramacion
             return null;
         }
 
+        // Definicion de identificadores
         public override object? VisitIdentificadores(LenguajeParser.IdentificadoresContext context)
         {
             var varName = context.IDENTIFIER().GetText();
@@ -59,6 +65,7 @@ namespace LenguajeProgramacion
             return Variables[varName];
         }
 
+        // Definicion operadores suma y resta
         public override object? VisitSumaResta(LenguajeParser.SumaRestaContext context)
         {
             var left = Visit(context.expression(0));
@@ -73,6 +80,7 @@ namespace LenguajeProgramacion
             };
         }
 
+        // Definicion operadores multiplicacion y division
         public override object? VisitMulDiv(LenguajeParser.MulDivContext context)
         {
             var left = Visit(context.expression(0));
@@ -87,6 +95,7 @@ namespace LenguajeProgramacion
             };
         }
 
+        // Definicion de operador para la potencia
         public override object? VisitPotencia(LenguajeParser.PotenciaContext context)
         {
             var left = Visit(context.expression(0));
@@ -100,6 +109,7 @@ namespace LenguajeProgramacion
             };
         }
 
+        // Definicion de operador para la raiz
         public override object? VisitRaiz(LenguajeParser.RaizContext context)
         {
             var left = Visit(context.expression(0));
@@ -112,6 +122,7 @@ namespace LenguajeProgramacion
             };
         }
 
+        // Definicion de tipos de datos
         public override object? VisitConstant(LenguajeParser.ConstantContext context)
         {
             if (context.INTEGER() is { } i)
@@ -135,6 +146,7 @@ namespace LenguajeProgramacion
             throw new NotImplementedException();
         }
 
+        // Definicion de ciclo While (mientras)
         public override object? VisitWhileBlock(LenguajeParser.WhileBlockContext context)
         {
             Func<object?, bool> condition = context.WHILE().GetText() == "mientras"
@@ -158,6 +170,7 @@ namespace LenguajeProgramacion
             return null;
         }
 
+        // Definicion de matrices
         public override object? VisitMatrixDeclaration(LenguajeParser.MatrixDeclarationContext context)
         {
             var varName = context.IDENTIFIER().GetText();
@@ -182,7 +195,6 @@ namespace LenguajeProgramacion
                     }
                 }
 
-
                 matrix.Add(rowValues);
             }
 
@@ -200,6 +212,7 @@ namespace LenguajeProgramacion
             return null;
         }
 
+        // Definicion para sacar indices de las matrices
         public override object? VisitIndexAccess(LenguajeParser.IndexAccessContext context)
         {
             var varName = context.IDENTIFIER().GetText();
@@ -226,7 +239,7 @@ namespace LenguajeProgramacion
             return matrix[rowIndex][colIndex];
         }
 
-
+        // Definicion del ciclo For (para)
         public override object? VisitForBlock(LenguajeParser.ForBlockContext context)
         {
             Visit(context.assignment(0));
@@ -245,6 +258,7 @@ namespace LenguajeProgramacion
             return null;
         }
 
+        // Definicion del If, else y elseif (si, entonces)
         public override object? VisitIfBlock(LenguajeParser.IfBlockContext context)
         {
 
@@ -270,6 +284,7 @@ namespace LenguajeProgramacion
             return null;
         }
 
+        // Definicion de comparadores logicos
         public override object? VisitComparativos(LenguajeParser.ComparativosContext context)
         {
             var left = Visit(context.expression(0));
@@ -278,7 +293,7 @@ namespace LenguajeProgramacion
 
             return op switch
             {
-                "==" => IsEquals(left, right),
+                "=" => IsEquals(left, right),
                 "!=" => NotEquals(left, right),
                 ">" => GreaterThan(left, right),
                 "<" => LessThan(left, right),
@@ -288,7 +303,7 @@ namespace LenguajeProgramacion
             };
         }
 
-
+        // Validacion para suma
         private object? Add(object? left, object? right)
         {
             if (left is int l && right is int r)
@@ -309,6 +324,7 @@ namespace LenguajeProgramacion
             throw new Exception($"No se puede añadir valores de tipo {left?.GetType()} y {right?.GetType()}");
         }
 
+        // Validacion para resta
         private object? Substract(object? left, object? right)
         {
             if (left is int l && right is int r)
@@ -329,6 +345,7 @@ namespace LenguajeProgramacion
             throw new Exception($"No se puede añadir valores de tipo {left?.GetType()} y {right?.GetType()}");
         }
 
+        // Validacion para multiplicacion
         private object? Multiply(object? left, object? right)
         {
             if (left is int l && right is int r)
@@ -349,6 +366,7 @@ namespace LenguajeProgramacion
             throw new Exception($"No se puede añadir valores de tipo {left?.GetType()} y {right?.GetType()}");
         }
 
+        // Validacion para division
         private object? Divide(object? left, object? right)
         {
             if (left is int l && right is int r)
@@ -378,6 +396,7 @@ namespace LenguajeProgramacion
             throw new Exception($"No se puede añadir valores de tipo {left?.GetType()} y {right?.GetType()}");
         }
 
+        // Validacion para potencia
         private object? Power(object? left, object? right)
         {
             if (left is int l && right is int r)
@@ -393,6 +412,7 @@ namespace LenguajeProgramacion
             throw new Exception($"No se puede calcular potencias de tipos de valor {left?.GetType()} y {right?.GetType()}");
         }
 
+        // Validacion para raiz
         private object? Sqrt(object? value)
         {
             if (value is int v)
@@ -416,6 +436,7 @@ namespace LenguajeProgramacion
             throw new ArgumentException("Tipo invalido de raiz");
         }
 
+        // Validacion para true y false (bool)
         private bool IsTrue(object? value)
         {
             return value is bool boolValue && boolValue;
@@ -426,7 +447,7 @@ namespace LenguajeProgramacion
             return !IsTrue(value);
         }
 
-
+        // Validacion para igual
         private object? IsEquals(object? left, object? right)
         {
             if (left is int l && right is int r)
@@ -444,6 +465,7 @@ namespace LenguajeProgramacion
             throw new Exception($"No se puede añadir valores de tipo {left?.GetType()} y {right?.GetType()}");
         }
 
+        // Validacion para negacion
         private object? NotEquals(object? left, object? right)
         {
             if (left is int l && right is int r)
@@ -464,6 +486,7 @@ namespace LenguajeProgramacion
             throw new Exception($"No se puede añadir valores de tipo {left?.GetType()} y {right?.GetType()}");
         }
 
+        // Validacion para mayor que
         private object? GreaterThan(object? left, object? right)
         {
             if (left is int l && right is int r)
@@ -484,6 +507,7 @@ namespace LenguajeProgramacion
             throw new Exception($"No se puede añadir valores de tipo {left?.GetType()} y {right?.GetType()}");
         }
 
+        // Validacion para menor que
         private object? LessThan(object? left, object? right)
         {
             if (left is int l && right is int r)
@@ -504,6 +528,7 @@ namespace LenguajeProgramacion
             throw new Exception($"No se puede añadir valores de tipo {left?.GetType()} y {right?.GetType()}");
         }
 
+        // Validacion para mayor o igual
         private object? GreaterThanOrEquals(object? left, object? right)
         {
             if (left is int l && right is int r)
@@ -524,6 +549,7 @@ namespace LenguajeProgramacion
             throw new Exception($"No se puede añadir valores de tipo {left?.GetType()} y {right?.GetType()}");
         }
 
+        // Validacion para menor o igual
         private object? LessThanOrEquals(object? left, object? right)
         {
             if (left is int l && right is int r)
@@ -544,6 +570,7 @@ namespace LenguajeProgramacion
             throw new Exception($"No se puede añadir valores de tipo {left?.GetType()} y {right?.GetType()}");
         }
 
+        // Validacion para imprimir en el CMD
         private object? Write(object?[] args)
         {
             foreach (var arg in args)

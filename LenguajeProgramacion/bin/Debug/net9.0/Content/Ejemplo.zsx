@@ -1,18 +1,10 @@
-x = 0;
-y = 0;
-z = 0;
-i = 0;
+x = 0; 
+hasta (x > 10) {
+    imprimir ("Sumando 1, ahora: " + x +); 
 
-miMatriz = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-];
-
-otraMatriz = [
-    [1, 2],
-    [4, 5]
-];
-
-imprimir ("Indice: " + miMatriz[0][1]); 
-imprimir (otraMatriz); 
+    x = x + 1;
+}
+entonces si (x = 10)
+{
+    imprimir ("Numero 10 alcanzado");
+}

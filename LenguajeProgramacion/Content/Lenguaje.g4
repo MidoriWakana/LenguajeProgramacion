@@ -52,7 +52,7 @@ powOp: '^' ;
 sqrtOp: 'raiz' ;
 multOp: '*' | '/' ;
 addOp: '+' | '-' ;
-compareOp: '==' | '!=' | '>' | '<' | '>=' | '<=' ;
+compareOp: '=' | '!=' | '>' | '<' | '>=' | '<=' ;
 boolOp: BOOL_OPERATOR;
 
 BOOL_OPERATOR: 'and' | 'or' | 'xor' ;
